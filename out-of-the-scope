@@ -1,0 +1,35 @@
+Title:
+[Summarize your question briefly and clearly]
+
+Description:
+[Provide a detailed description of the problem you are facing. Include relevant code snippets, error messages, and any specific steps to reproduce the issue.]
+
+Context:
+[Explain the context of your problem. Mention the technologies, frameworks, and libraries you are using. Also, include any relevant versions (e.g., React version, Redux Toolkit version).]
+
+Expected Behavior:
+[Describe what you expect to happen when the code runs correctly. Be specific and clear about the desired outcome.]
+
+Current Behavior:
+[Explain what is currently happening when you execute the code. Describe any error messages or unexpected behavior.]
+
+Steps to Reproduce:
+[Provide a step-by-step guide for reproducing the issue. Include all necessary details, such as inputs, user interactions, and expected outputs.]
+
+What I've Tried:
+[Explain the steps you have taken to troubleshoot or resolve the problem. Mention any debugging you've done, research you've conducted, and resources you've consulted.]
+
+Code Snippets:
+[Include relevant parts of your code that are causing the issue. Use proper formatting (e.g., code blocks) to make it readable.]
+
+Additional Information:
+[Add any other information that could be relevant to your question but wasn't covered in the previous sections.]
+
+Remember, when asking a question on Stack Overflow, it's crucial to:
+
+Be clear and specific about the problem.
+Include all relevant details, such as code snippets, error messages, and versions.
+Use proper formatting to make your question readable.
+Avoid asking multiple questions in a single post; stick to one problem per question.
+Be polite and appreciative of any help or responses you receive.
+After posting your question, monitor it for any comments, answers, or requests for clarifications. Be ready to provide additional information if needed. Good luck with your Stack Overflow question, and I hope you find the solution you're looking for!

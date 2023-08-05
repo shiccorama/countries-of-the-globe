@@ -24,13 +24,13 @@ export const countriesSlice = createSlice({
       state.countrySearched = [];
       state.region = "";
       state.searchTerm = "";
-    }
-  },
-  setRegion: (state, action) => {
-    state.region = action.payload;
-  },
-  setSearchTerm: (state, action) => {
-    state.searchTerm = action.payload;
+    },
+    setRegion: (state, action) => {
+      state.region = action.payload;
+    },
+    setSearchTerm: (state, action) => {
+      state.searchTerm = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(showAllCountries.pending, (state) => {
