@@ -37,7 +37,7 @@ const Country = () => {
     <section className="country-container">
       { loading ? (<h1> loading ... </h1>) : (
         countriesData.length > 0 && countriesData.map((item,index) => {
-            <Link
+          return (            <Link
               to={`/${item.cioc}`}
               // onClick={() => dispatch(searchByName(item.cioc.toLowerCase()))}
               className="country-card"
@@ -56,7 +56,7 @@ const Country = () => {
                   Capital: <span>{item.capital}</span>
                 </p>
               </div>
-            </Link>
+            </Link>)
         })
       )
       }
