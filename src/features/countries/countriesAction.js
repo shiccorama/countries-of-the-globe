@@ -8,8 +8,8 @@ export const showAllCountries = createAsyncThunk("countries/showAll", async(_, t
     // console.log(response.data)
     return response.data;
 
-  } catch(err) {
-    const message = (err.response && err.response.data) || err.message;
+  } catch(error) {
+    const message = (error.response && error.response.data) || error.message;
 
     // this function (rejectWithValue) will send the error message as a payload to our page to be displayed.
     return thunkAPI.rejectWithValue(message);
@@ -23,9 +23,10 @@ export const searchByCode = createAsyncThunk("countries/searchByCode", async(cod
   try {
     const response = await axios.get(`https://restcountries.com/v3.1/alpha/${code}`);
     return response.data;
-  } catch (err) {
-    const message = (err.response && err.response.data) || err.message;
+  } catch (error) {
+    const message = (error.response && error.response.data) || error.message;
     console.log(message);
+    return thunkAPI.rejectWithValue(message);
   } finally {
     console.log(thunkAPI);
   }
@@ -37,9 +38,10 @@ export const searchByRegion = createAsyncThunk("countries/searchByRegion", async
   try {
     const response = await axios.get(`https://restcountries.com/v3.1/region/${region}`);
     return response.data;
-  } catch (err) {
-    const message = (err.response && err.response.data) || err.message;
+  } catch (error) {
+    const message = (error.response && error.response.data) || error.message;
     console.log(message);
+    return thunkAPI.rejectWithValue(message);
   } finally {
     console.log(thunkAPI);
   }

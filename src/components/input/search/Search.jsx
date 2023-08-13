@@ -6,11 +6,13 @@ import { FaSearchengin } from "react-icons/fa6";
 
 
 const Search = () => {
+
   const { searchTerm } = useSelector((state) => state.country);
+
   const dispatch = useDispatch();
+
   const handleInputValueChange = (e) => {
-    console.log(e.target.value)
-    dispatch(setSearchTerm(e.target.value));
+    dispatch(setSearchTerm(e.target.value.toLowerCase()));
   }
 
   return (

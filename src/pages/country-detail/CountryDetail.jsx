@@ -3,13 +3,12 @@ import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { searchByCode } from "../../features/countries/countriesAction";
 import { reset } from "../../features/countries/countriesSlice";
-
 // import from Redux :
 import { useSelector, useDispatch } from "react-redux";
 
 const CountryDetail = () => {
 
-  const { err, countrySearched } = useSelector((state) => state.country );
+  const { error, countrySearched } = useSelector((state) => state.country);
   const dispatch = useDispatch();
   const {code} = useParams();
 
@@ -17,13 +16,13 @@ const CountryDetail = () => {
     if(code){
       dispatch(searchByCode(code.toLowerCase()));
     }
-    if(err){
-      console.log(err);
+    if(error){
+      console.log(error);
     }
     return () => {
       dispatch(reset)
     }
-  }, [dispatch, code, err])
+  }, [dispatch, code, error])
 
   return (
     <section className="country-detail-container">
@@ -48,7 +47,6 @@ const CountryDetail = () => {
                 <p>
                   Region: <span>{countrySearched[0].region}</span>
                 </p>
-
                 <p>
                   Sub Region: <span>{countrySearched[0].subregion}</span>
                 </p>
@@ -69,7 +67,6 @@ const CountryDetail = () => {
                     }).join(",")}
                   </span>
                 </p>
-
                 <p>
                   Languages:
                   <span>
@@ -85,7 +82,7 @@ const CountryDetail = () => {
               <p>Border Countries:</p>
               {countrySearched[0].borders ? 
                 countrySearched[0].borders.map((item, index) => {
-                  return (<Link className="border-name" key={index} to={`${item}`}>
+                  return (<Link className="border-name" key={index} to={`/${item}`}>
                     <p>{item}</p>
                   </Link>)}
                 ) : (<span> No Borders </span>)}
@@ -93,7 +90,6 @@ const CountryDetail = () => {
           </div>
         </>
       ) : <div> No Details Found! </div> }
-
       </div>
     </section>
   );
